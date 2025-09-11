@@ -92,7 +92,7 @@ const Navbar = () => {
         </div>
       </div>
       <div
-        className={`bg-sand fixed top-0 right-0 z-[100] h-screen w-[75%] max-w-sm shadow-2xl transition-transform duration-500 ease-in-out ${
+        className={`bg-sand fixed top-0 right-0 z-[100] h-screen w-[75%] max-w-sm rounded-l-2xl shadow-2xl transition-transform duration-500 ease-in-out ${
           isOpen ? 'translate-x-0' : 'translate-x-full'
         }`}
       >
@@ -105,7 +105,7 @@ const Navbar = () => {
                 className='w-full'
                 onClick={() => setIsOpen(false)}
               >
-                <div className='border-wood flex w-full items-center justify-center border py-3'>
+                <div className='border-wood flex w-full items-center justify-center rounded-lg border py-3'>
                   <p className='text-wood font-semibold'>{item.label}</p>
                 </div>
               </Link>
