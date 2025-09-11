@@ -18,7 +18,7 @@ const Navbar = () => {
 
   return (
     <nav
-      className={`fixed top-0 z-50 w-full px-4 py-3 ${isScrolled ? 'glassmorphic' : 'bg-transparent'}`}
+      className={`fixed top-0 z-50 w-full px-4 py-3 ${isScrolled ? 'glassmorphic' : 'bg-transparent'} ${isOpen && 'h-screen'}`}
     >
       <div className='mx-auto flex max-w-6xl items-center justify-between lg:px-6'>
         <Image
