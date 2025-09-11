@@ -1,6 +1,10 @@
 'use client'
+import Link from 'next/link'
 import Image from 'next/image'
 import { useEffect, useState } from 'react'
+
+import { TNavMenu } from '@/types'
+import { NAV_MENU } from '@/constant/navMenu'
 
 const Navbar = () => {
   const [isScrolled, setIsScrolled] = useState<boolean>(false)
@@ -30,7 +34,19 @@ const Navbar = () => {
         />
 
         <div>
-          <div className='hidden lg:block'>ok</div>
+          <div className='hidden lg:block'>
+            <div className='flex gap-5'>
+              {NAV_MENU?.map((item: TNavMenu, index: number) => {
+                return (
+                  <Link href={item.href} key={index}>
+                    <p className='text-wood hover:text-wood/80 font-semibold transition-all duration-150'>
+                      {item.label}
+                    </p>
+                  </Link>
+                )
+              })}
+            </div>
+          </div>
           <button
             className={`group fixed right-6 z-[150] transition-all duration-300 ease-in-out lg:hidden ${isScrolled ? 'top-3' : 'top-3'}`}
             onClick={() => setIsOpen(!isOpen)}
@@ -80,7 +96,22 @@ const Navbar = () => {
           isOpen ? 'translate-x-0' : 'translate-x-full'
         }`}
       >
-        <div className='flex h-full flex-col items-center justify-center p-4'></div>
+        <div className='flex h-full flex-col items-center justify-center gap-3 p-4'>
+          {NAV_MENU?.map((item: TNavMenu, index: number) => {
+            return (
+              <Link
+                href={item.href}
+                key={index}
+                className='w-full'
+                onClick={() => setIsOpen(false)}
+              >
+                <div className='border-wood flex w-full items-center justify-center border py-3'>
+                  <p className='text-wood font-semibold'>{item.label}</p>
+                </div>
+              </Link>
+            )
+          })}
+        </div>
       </div>
       {isOpen && (
         <div

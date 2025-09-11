@@ -46,10 +46,10 @@ const Home = () => {
                 </p>
                 <div className='mt-6 flex gap-3'>
                   <Button asChild>
-                    <Link href='/#'>Lihat Fasilitas</Link>
+                    <Link href='/#fasilitas'>Lihat Fasilitas</Link>
                   </Button>
                   <Button variant='outline'>
-                    <Link href='/#'>Hubungi Kami</Link>
+                    <Link href='/#kontak'>Hubungi Kami</Link>
                   </Button>
                 </div>
                 <div className='mt-6 flex flex-wrap gap-2'>
@@ -66,8 +66,8 @@ const Home = () => {
               </div>
             </div>
           </section>
-          <section id='fasilitas' className='relative isolate py-14'>
-            <h2 className='text-wood text-3xl leading-tight font-extrabold tracking-tight'>
+          <section id='fasilitas' className='relative isolate py-20'>
+            <h2 className='text-wood mb-2 text-3xl leading-tight font-extrabold tracking-tight'>
               Fasilitas
             </h2>
             <div className='grid grid-cols-1 gap-8 md:grid-cols-3'>
@@ -79,7 +79,7 @@ const Home = () => {
         </div>
         <div className='bg-white'>
           <div className='mx-auto max-w-6xl px-6'>
-            <section id='kontak' className='relative isolate py-14'>
+            <section id='kontak' className='relative isolate py-20'>
               <div className='grid grid-cols-1 gap-8 md:grid-cols-2'>
                 <div>
                   <h2 className='text-wood text-3xl leading-tight font-extrabold tracking-tight'>
@@ -108,16 +108,21 @@ const Home = () => {
                   </ul>
                   <div className='mt-6 flex gap-3'>
                     <Button asChild>
-                      <Link href='/#'>Chat via WhatsApp</Link>
+                      <Link
+                        href='https://api.whatsapp.com/send/?phone=6281548344614&text=Halo%2C+saya+ingin+menanyakan+informasi+mengenai+Kos+Ibu+Ami+Petarukan.+Apakah+masih+tersedia+kamar+kos+saat+ini%3F&type=phone_number&app_absent=0'
+                        target='_blank'
+                      >
+                        Chat via WhatsApp
+                      </Link>
                     </Button>
                     <Button variant='outline'>
-                      <Link href='/#'>Kembali Ke Atas</Link>
+                      <Link href='/#home'>Kembali Ke Atas</Link>
                     </Button>
                   </div>
                 </div>
                 <iframe
                   src='https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3960.943450126874!2d109.45041717499628!3d-6.897367393101819!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e6fdb69bc6e4a31%3A0xa511e87e83c5fd42!2sKos%20Ibu%20Ami%20Petarukan!5e0!3m2!1sid!2sid!4v1757570445123!5m2!1sid!2sid'
-                  className='h-[300px] w-full rounded-2xl md:h-[450px]'
+                  className='h-[300px] w-full rounded-2xl md:h-[380px]'
                   style={{ border: 0 }}
                   allowFullScreen={true}
                   loading='lazy'

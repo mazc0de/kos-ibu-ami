@@ -10,3 +10,8 @@ export type TContact = {
   href?: string
   icon: LucideIcon
 }
+
+export type TNavMenu = {
+  label: string
+  href: string
+}
