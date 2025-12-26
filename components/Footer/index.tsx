@@ -8,12 +8,8 @@ const Footer = () => {
           © 2025 Kos Ibu Ami Petarukan. All rights reserved.
         </p>
         <div className=''>
-          <p className='text-wood flex items-center justify-center text-sm'>
-            Made with
-            <span>
-              <Heart className='mx-1 h-4 w-4' />
-            </span>
-            by her son
+          <p className='text-wood flex items-center justify-center text-sm font-semibold'>
+            Lovingly made by her child
           </p>
         </div>
       </div>
